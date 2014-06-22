@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#main { background-color: #FFFFFF; margin: 0 auto; position: relative; text-align: left; width: 948px; z-index: 1; font-size:15px; color:#333; }
+#content { margin:0; padding:0; width:948px; }
+#content .wrap { position: relative; padding:50px 0 70px 0; margin: 0 auto; width: 868px; }
+
+#login { clear:left; width:425px; float:left; border-right:1px solid #eee; }
+#content #login h1 { padding:20px 0 0 0; margin:0; width:150px;  color: #00A0DD; border-bottom:none; float:left; font-size:38px; font-weight:normal; }
+#form_content { width:240px; float:left; }
+#form_content label { display:block; font-weight:normal; padding:0 0 3px 0; margin:0; text-align:left; font-size:13px; color:#595959; }
+#form_content input{ width:210px; padding:3px 5px; font-size:11px; color:#2c3333; }
+#form_content .form_submit_hide input{ width:auto !important; color:#fff; background:#333; float:none; }
+#form_content .form_submit_hidden{ height:1px; line-height:1px; font-size:1px; visibility:hidden; padding:0; }
+#form_content .form_submit_hidden input{ height:1px; width:1px; background:transparent; }
+#form_content p.error { color:#ED1C24; }
+.form_submit { float:right; padding-right:46px; position:relative; top:40px; height:30px; }
+#createaccount { float:left; width:425px; }
+#createaccount h3 { margin:0; padding:20px 0 24px 50px; color: #00A0DD; border-bottom:none; font-size:38px; font-weight:normal; }
+#createaccount ul { margin:0; padding:0 0 15px 66px; }
+#createaccount li { margin:0; padding:0 0 3px 0; }
+#createaccount .btn { float:right; margin-right:20px; }
+
+
+
+#help { margin:0; padding:0 0 0 150px; clear:both; position:relative; top:-35px; }
+#help ul { list-style-type:none; margin:0; padding:0; }
+#help ul li { padding-bottom:4px; }
+#help ul li a { text-decoration:none; font-size:13px; }
+
+
+
+#form_content p.form_submit_hide_img { margin:0; padding:0; }
+#form_content p.form_submit_hide_img input { float:right; width:20px; height:1px; }
+
+.form_submit p a{ padding:0 16px 0 0; }
