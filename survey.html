@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>e Online Retailer Website</title>
+		<meta charset="utf-8">
+		<link href="css/css_type_1.css" rel="stylesheet" media="all">
+		<script type="text/javascript" src="java/jquery-1.9.1.min.js"></script>     
+    	<script type="text/javascript" src="java/jquery.colorbox.js"></script>
+		<script type="text/javascript" src="java/jquery.colorbox.setting.js"></script>
+    	<link rel="stylesheet" href="css/colorbox.css" type="text/css" media="all" />
+        
+		<script language="javascript" type="text/javascript">    
+        
+        function chk_email(form)
+		{
+			var email = form.elements[2].value;
+			atpos = email.indexOf('@');
+			dotpos = email.lastIndexOf('.');
+			if( atpos < 1 || ( dotpos - atpos < 2) )
+			{
+				alert( "Please enter correct email" );
+				form.elements[2].focus();
+				return false;	
+			}	
+			
+			return true;
+		}		
+
+		function chk_elements(form)
+		{
+			for( var i = 0; i < 3; i++) {
+				chk_item_textBox = form.elements[i].value;
+				if( chk_item_textBox == '' )
+				{
+					alert( "Please fill in the information, thank you!" );
+					form.elements[i].focus();
+					return false;
+				}
+			}
+			
+			var ret = chk_email(form);
+			if( ret == false )
+			{
+				return false;
+			}			
+									
+			
+			if( form.elements[3].checked ) {}
+			else if (form.elements[4].checked ) {}
+			else			
+			{
+				alert( "Please check the appropriate gender, thank you!" );
+				return false;
+			}
+			
+			if( form.elements[5].checked ) {}
+			else if (form.elements[6].checked ) {}
+			else if (form.elements[7].checked ) {}
+			else if (form.elements[8].checked ) {}
+			else if (form.elements[9].checked ) {}
+			else if (form.elements[10].checked ) {}
+			else			
+			{
+				alert( "Please check the OS you used, thank you!" );
+				return false;
+			}
+			
+			if( form.elements[11].checked ) {}
+			else if (form.elements[12].checked ) {}
+			else if (form.elements[13].checked ) {
+				if (form.elements[14].value == '') 
+				{
+					alert( "Please enter the Magazine's name, thank you!" );
+					form.elements[14].focus();
+					return false;									
+				}
+			}
+			else if (form.elements[15].checked ) 
+			{
+				if (form.elements[16].value == '') 
+				{
+					alert( "Please enter the way you know our website, thank you!" );
+					form.elements[16].focus();
+					return false;	
+				}
+			}			
+			else			
+			{
+				alert( "Please choose the way you know our website, thank you!" );
+				return false;
+			}
+					
+			
+			if( form.elements[17].checked ) {}
+			else if (form.elements[18].checked ) {}
+			else if (form.elements[19].checked ) {}
+			else if (form.elements[20].checked ) {}
+			else if (form.elements[21].checked ) {}
+			else			
+			{
+				alert( "Please check the appropriate option: Design, thank you!" );
+				return false;
+			}
+			
+			if( form.elements[22].checked ) {}
+			else if (form.elements[23].checked ) {}
+			else if (form.elements[24].checked ) {}
+			else if (form.elements[25].checked ) {}
+			else if (form.elements[26].checked ) {}
+			else			
+			{
+				alert( "Please check the appropriate option: Easy to look for items, thank you!" );
+				return false;
+			}
+			
+			
+			if( form.elements[27].checked ) {}
+			else if (form.elements[28].checked ) {}
+			else if (form.elements[29].checked ) {}
+			else if (form.elements[30].checked ) {}
+			else if (form.elements[31].checked ) {}
+			else			
+			{
+				alert( "Please check the appropriate option: Loading time, thank you!" );
+				return false;
+			}
+			
+			if( form.elements[32].checked ) {}
+			else if (form.elements[33].checked ) {}
+			else if (form.elements[34].checked ) {}
+			else if (form.elements[35].checked ) {}
+			else if (form.elements[36].checked ) {}
+			else			
+			{
+				alert( "Please check the appropriate option: Number of Category, thank you!" );
+				return false;
+			}
+			
+			alert( "Thank you for your opinions!" );
+			
+			return true;
+		}
+
+
+		</script>
+    
+
+    </head>
+
+	<body>
+        <div id="top">
+            <input id="search_box" type="search" name="search" value="Search here" onClick="this.value='';" onBlur="this.value='Search here';">&nbsp <input type="button" id="search_buttom">&nbsp&nbsp <a id="login" class="iframe" href="login.html">Login</a>
+        </div>    
+        <div id="top_cen">
+        	<div id="logo_container">
+            	<img src="pic/e_logo_300x300_2.gif" style="height:100%;"><em id="logo_text">Online Retailer Store</em>
+            </div>
+            <div id="sections">
+                <table class="center">
+                    <tr>
+                        <td><a href="index.html">Home</a></td>
+                        <td><a href="product.html">Product</a></td>
+                        <td><a href="about.html">About us</a></td>
+                        <td><a href="contact_us.html">Contact us</a></td>
+                    </tr>
+                </table>
+            </div>    
+            <div id="cen">
+            
+            	<h1>Survey</h1>
+			      
+        		<form action="#" method="post" name="opinion" onsubmit="return chk_elements(this)">
+									<table border="0" cellspacing="0" cellpadding="0" style="width:90%;">
+
+										<tr><td colspan="3" class="itemseparate">
+											Please select the appropriate option.<br/>
+											<br/>
+										</td></tr>
+
+										<tr>
+											<td class="itemhead">Name:</td>
+											<td class="itembody"><input type="text" name="01.Name"></td>
+										</tr>
+										<tr>
+											<td class="itemhead">Age:</td>
+											<td class="itembody"><input name="02.Age">
+										    </td>
+										</tr>
+										<tr>
+											<td class="itemhead">E-mail:</td>
+											<td class="itembody"><input name="03.E-mail"></td>
+										</tr>
+										<tr>
+											<td class="itemhead">Gender:</td>
+											<td class="itembody">
+												<input type="radio" name="04.Gender" value="Male">Male
+												<input type="radio" name="04.Gender" value="Female">Female
+											</td>
+										</tr>
+										<tr>
+											<td class="itemhead">Which OS you use:</td>
+											<td class="itembody">
+												<input type="radio" name="05.OS" value="Windows XP">Windows XP
+												<input type="radio" name="05.OS" value="Windows Vista">Windows Vista
+												<input type="radio" name="05.OS" value="Windows 7">Windows 7
+												<input type="radio" name="05.OS" value="Windows 8">Windows 8
+                                                <input type="radio" name="05.OS" value="Mac">Mac
+                                                <input type="radio" name="05.OS" value="Other">Other
+											</td>
+										</tr>
+										<tr>
+											<td class="itemhead">How do you know our website:</td>
+											<td class="itembody">
+												<input type="checkbox" name="06.infoSource" value="Friends">Friends
+												<br/>
+												<input type="checkbox" name="06.infoSource" value="Advertisement">Advertisement
+												<br/>
+												<input type="checkbox" name="06.infoSource" value="Magazine">Magazine
+													　Magazine Name:<input name="07.magazineName">
+												<br/>
+												<input type="checkbox" name="06.infoSource" value="other">Other
+													　<input name="08.othersDetail">
+											</td>
+										</tr>
+                                        
+										<tr><td colspan="3" class="itemseparate">About our website</td></tr>
+										<tr>
+											<td class="itemhead">Design:</td>
+											<td class="itembody">
+												<input type="radio" name="09.satisfactory(design)" value="Excellent">Excellent
+												<input type="radio" name="09.satisfactory(design)" value="Good">Good
+												<input type="radio" name="09.satisfactory(design)" value="Average">Average
+												<input type="radio" name="09.satisfactory(design)" value="Fair">Fair
+												<input type="radio" name="09.satisfactory(design)" value="Poor">Poor
+											</td>
+										</tr>
+										<tr>
+											<td class="itemhead">Easy to look for items:</td>
+											<td class="itembody">
+												<input type="radio" name="10.satisfactory(EasyToLookForItems)" value="Excellent">Excellent
+												<input type="radio" name="10.satisfactory(EasyToLookForItems)" value="Good">Good
+												<input type="radio" name="10.satisfactory(EasyToLookForItems)" value="Average">Average
+												<input type="radio" name="10.satisfactory(EasyToLookForItems)" value="Fair">Fair
+												<input type="radio" name="10.satisfactory(EasyToLookForItems)" value="Poor">Poor
+											</td>
+										</tr>
+										<tr>
+											<td class="itemhead">Loading time:</td>
+											<td class="itembody">
+												<input type="radio" name="11.satisfactory(LoadingTime)" value="Excellent">Excellent
+												<input type="radio" name="11.satisfactory(LoadingTime)" value="Good">Good
+												<input type="radio" name="11.satisfactory(LoadingTime)" value="Average">Average
+												<input type="radio" name="11.satisfactory(LoadingTime)" value="Fair">Fair
+												<input type="radio" name="11.satisfactory(LoadingTime)" value="Poor">Poor
+											</td>
+										</tr>
+										<tr>
+											<td class="itemhead">Number of Category:</td>
+											<td class="itembody">
+												<input type="radio" name="12.satisfactory(NumOfCategory)" value="Excellent">Excellent
+												<input type="radio" name="12.satisfactory(NumOfCategory)" value="Good">Good
+												<input type="radio" name="12.satisfactory(NumOfCategory)" value="Average">Average
+												<input type="radio" name="12.satisfactory(NumOfCategory)" value="Fair">Fair
+												<input type="radio" name="12.satisfactory(NumOfCategory)" value="Poor">Poor
+											</td>
+										</tr>
+<!--										<tr>
+											<td class="itemhead">a:</td>
+											<td class="itembody">
+												<input type="radio" name="13.satisfactory" value="Excellent">Excellent
+												<input type="radio" name="13.satisfactory" value="Good">Good
+												<input type="radio" name="13.satisfactory" value="Average">Average
+												<input type="radio" name="13.satisfactory" value="Fair">Fair
+												<input type="radio" name="13.satisfactory" value="Poor">Poor
+											</td>
+										</tr>
+										<tr>
+											<td class="itemhead">a:</td>
+											<td class="itembody">
+												<input type="radio" name="14.satisfactory" value="Excellent">Excellent
+												<input type="radio" name="14.satisfactory" value="Good">Good
+												<input type="radio" name="14.satisfactory" value="Average">Average
+												<input type="radio" name="14.satisfactory" value="Fair">Fair
+												<input type="radio" name="14.satisfactory" value="Poor">Poor
+											</td>
+										</tr>
+										<tr>
+											<td class="itemhead">a:</td>
+											<td class="itembody">
+												<input type="radio" name="15.satisfactory" value="Excellent">Excellent
+												<input type="radio" name="15.satisfactory" value="Good">Good
+												<input type="radio" name="15.satisfactory" value="Average">Average
+												<input type="radio" name="15.satisfactory" value="Fair">Fair
+												<input type="radio" name="15.satisfactory" value="Poor">Poor
+											</td>
+										</tr>  
+                                        
+-->
+
+		                                <tr>
+											<td class="itemhead">Any other comment:</td>
+											<td class="itembody"><textarea name="16.comment" style="width:100%; height:128px;"></textarea></td>
+										</tr>
+
+									</table>
+
+									<div align="center"><input type="submit" value="Submit" />&nbsp;&nbsp;<input type="reset" value="Reset" /></div>
+								</form>
+                                
+							<br><br><br>
+							<footer>&copy; 2013 Some copyright message &nbsp<a href="privacy.html">Privacy</a>&nbsp&nbsp<a href="sitemap.html">Site Map</a></footer>
+              
+		
+            </div>
+        </div>  
+	</body>
+</html>
