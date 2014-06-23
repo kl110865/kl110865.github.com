@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>e Online Retailer Website</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="java/jquery-1.9.1.min.js"></script>     
+    	<script type="text/javascript" src="java/jquery.colorbox.js"></script>
+		<script type="text/javascript" src="java/jquery.colorbox.setting.js"></script>
+    	<link rel="stylesheet" href="css/colorbox.css" type="text/css" media="all" />
+		<link href="css/css_type_1.css" rel="stylesheet" media="all">
+       
+		<script language="javascript" type="text/javascript">
+        
+            $(function(){
+            
+              	function catFilter(){
+    
+                if ($(this).val() == "camera") {
+                    $(".camera").show();
+                    $(".phone").hide();
+                }
+                if ($(this).val() == "phone") {
+                    $(".camera").hide();
+                    $(".phone").show();
+                }
+                if ($(this).val() == "all") {
+                    $(".camera").show();
+                    $(".phone").show();
+                }
+            }
+			  
+              function brandFilter(){
+    
+                if ($(this).val() == "nikon") {
+                    $(".nikon").show();
+                    $(".canon").hide();
+					$(".sony").hide();
+                }
+                if ($(this).val() == "canon") {
+                    $(".nikon").hide();
+                    $(".canon").show();
+					$(".sony").hide();
+                }
+				if ($(this).val() == "sony") {
+                    $(".nikon").hide();
+                    $(".canon").hide();
+					$(".sony").show();
+                }
+                if ($(this).val() == "all") {
+                    $(".nikon").show();
+                    $(".canon").show();
+					$(".sony").show();
+                }
+            }
+			
+			                    
+            $("#cat").change(catFilter);
+            $("#brand").change(brandFilter);
+			
+            });
+        </script>
+    </head>
+
+	<body>
+        <div id="top">
+            <input id="search_box" type="search" name="search" value="Search here" onClick="this.value='';" onBlur="this.value='Search here';">&nbsp <input type="button" id="search_buttom">&nbsp&nbsp <a id="login" class="iframe" href="login.html">Login</a>
+        </div>    
+        <div id="top_cen">
+        	<div id="logo_container">
+            	<img src="pic/e_logo_300x300_2.gif" style="height:100%;"><em id="logo_text">Online Retailer Store</em>
+            </div>
+            <div id="sections">
+                <table class="center">
+                    <tr>
+                        <td><a href="index.html">Home</a></td>
+                        <td><a href="#">Product</a></td>
+                        <td><a href="about.html">About us</a></td>
+                        <td><a href="contact_us.html">Contact us</a></td>
+                    </tr>
+                </table>
+            </div>    
+            <div id="cen">
+                
+                <h1>Product</h1>
+                
+                <div id="productTitle">                
+                    <form>
+                    	Category
+                        <select id="cat">
+                            <option value="all">All</option>
+                            <option value="camera">Camera</option>
+                            <option value="phone">Phone</option>
+                        </select>
+                        Brand
+                        <select id="brand">
+                            <option value="all">All</option>
+                            <option value="nikon">Nikon</option>
+                            <option value="canon">Canon</option>
+                            <option value="sony">Sony</option>
+                        </select>
+                    </form>                
+                </div>
+                                
+                <div>                    	
+                        <div class="camera">
+                      
+                            <table class="nikon">                            
+                                <td id="table_details_pic"><img src="pic/DSLR/D600.jpg" width="120" height="90"></td>
+                                <td id="table_details_main">        
+                                        <ul class="cus_bullet"> 
+                                            <li id="nobu">Nikon D600</li>
+                                            <li>The lightest Nikon FX-format DSLR</li> 
+                                            <li>24.3 megapixel</li> 
+                                            <li>Full HD movie (1,920 x 1,080/30p)</li> 
+                                        </ul>
+                                </td>
+                                <td id="table_details_link"><a id="link" class="inline" href="#nikon_d600"><h2>Detail</h2></a><a id="link" target="_new" href="product_nikon_d600.html">Detail(pop-up)</a><a class="addToCart" href="#">Add To Cart</a></td>
+                            </table>  
+                            
+                            <table class="nikon">
+                                <td id="table_details_pic"><img src="pic/DSLR/D4.jpg" width="120" height="90"></td>
+                                <td id="table_details_main">        
+                                        <ul class="cus_bullet"> 
+                                            <li id="nobu">Nikon D4</li>
+                                            <li>High Picture Quality at 16.2 million pixels</li> 
+                                            <li>New FX-format CMOS sensor, EXPEED 3 and ISO 100 to 204800</li> 
+                                            <li>Ultimate Speed Continous Shooting at 11fps</li> 
+                                        </ul>
+								</td>   
+                                <td id="table_details_link"><a id="link" class="inline" href="#nikon_d4"><h2>Detail</h2></a><a id="link" target="_new" href="product_nikon_d4.html">Detail(pop-up)</a><a class="addToCart" href="#">Add To Cart</a></td>                       
+                            </table>
+                            
+                            <table class="canon">
+                                <td id="table_details_pic"><img src="pic/DSLR/5d_marklll_3q_120x80.gif" width="120" height="80"></td>
+								<td id="table_details_main">        
+                                        <ul class="cus_bullet"> 
+                                            <li id="nobu">Canon EOS 5D Mark III</li>
+                                            <li>22.3 Megapixel Full-Frame CMOS, 14-bit A/D conversion, wide range ISO setting 100-25600 and DIGIC 5+ Image Processor</li> 
+                                            <li>New 61-Point High Density Reticular AF including up to 41 cross-type AF points</li> 
+                                            <li>EOS HD Video with manual exposure control and multiple frame rates and selectable "All i-frame" or IPB compressions</li> 
+                                            <li>Up to 6.0 fps continuous shooting </li> 
+                                        </ul>
+                                </td>
+                                <td id="table_details_link"><a id="link" class="inline" href="#canon_5dmark3"><h2>Detail</h2></a><a id="link" target="_new" href="product_cannon_5dmark3.html">Detail(pop-up)</a><a class="addToCart" href="#">Add To Cart</a></td>   
+                            </table>
+                        </div>
+                        
+                        <div class="phone">
+                        
+                            <table class="sony">
+                                <td id="table_details_pic"><img src="pic/phone/xperia_z_600px.gif" width="120"></td>
+                                <td id="table_details_main">        
+                                        <ul class="cus_bullet"> 
+                                            <li id="nobu">Sony Xperia Z</li>
+                                            <li>IP certified water/dust resistant (IPX55/57)</li> 
+                                            <li>5" Full HD display powered by Mobile BRAVIA® Engine 2 (443ppi)</li> 
+                                            <li>New 13MP Exmor RS camera sensor with HDR</li> 
+                                            <li>4G LTE with the quad-core processor (Snapdragon S4 Pro)</li> 
+                                        </ul>
+                                </td>
+                                <td id="table_details_link"><a id="link" class="inline" href="#sony_xperia_z"><h2>Detail</h2></a><a id="link" target="_new" href="product_sony_xperia_z.html">Detail(pop-up)</a><a class="addToCart" href="#">Add To Cart</a></td>   
+                            </table> 
+                        
+                        </div>
+                        
+                        <div id="productDetails">
+							<div id='nikon_d600'>
+                                    <h1><ul>Nikon D600</ul></h1>
+                                    <img id="rightfloat" src="pic/DSLR/D600_BIG.jpg">
+                                    <p>Power your passion with the Nikon D600. As the lightest and most compact* Nikon full-frame- DSLR, it offers stunning sharpness and brilliant image quality.</p>
+                                    <p>Capture everything from lush landscapes to still portraits with its 24.3 effective megapixel FX-format sensor, with an ultra-fast EXPEED 3 image processing engine and a versatile ISO 	range from 100 to 6400. It also provides a true cinematic experience with full HD video recording. The D600 brings you greater flexibility and mobility, taking photography to the next level.</p>
+                                    <p>*Approximately 760g for body only</p>
+                                    
+                                    <p id="pricing">$2,099.95 Body only <br> $2,699.95 24-85mm VR Lens Kit</p>
+                                    
+                                    
+                                    <div class="section_first-section">
+                                    <ul class="list-A01 pseudo-first-child">
+                                    <li>Image-processing engine EXPEED 3, the same as used for the D4 and D800 series, realizes superior high-speed processing performance. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    <li>Wide ISO sensitivity range ISO 100 to 6400* at normal setting that handles various degrees of brightness. <br>
+                                    <ul class="list-note-B01">
+                                    <li>*　Expandable to ISO 50 equivalent or ISO 25600 equivalent.</li>
+                                    </ul>
+                                    </li>
+                                    <li>Approx. 0.13 s* start-up time and approx. 0.052 s* shutter-release time lag. High-speed continuous shooting at approx. 5.5 fps*. <br>
+                                    <ul class="list-note-B01">
+                                    <li>*　Based on CIPA Guidelines.</li>
+                                    </ul>
+                                    </li>
+                                    <li>Newly developed glass pentaprism optical viewfinder with approx. 100% frame coverage that enables a grid line display. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    <li>SD memory card double slots compatible with high-speed SDXC and UHS-I. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    <li>Approx. 921k-dot, wide-viewing angle, 8-cm (3.2-in.) LCD monitor with reinforced glass that reduces the surface reflection of each part to deliver clear visibility with its integrated structure of glass and panel. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    <li>Multi-area mode Full HD D-Movie that delivers two selectable movie formats. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    <li>Virtual horizon that detects both "pitching" and "rolling" directions. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    <li>Compatible with the WU-1b Wireless Mobile Adapter (optional) that enables remote shooting and transmission of images to a smart device [NEW]. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    <li>MB-D14 Multi-Power Battery Pack (optional) that enables smooth vertical shooting [NEW]. <br>
+                                    <ul class="list-note-B01">
+                                    <li></li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+                                    <br>
+                                    </div>
+                                    
+                                    
+                                    
+							</div>
+                             
+                            <div id='nikon_d4'>
+                            	<img id="rightfloat" src="pic/DSLR/D4_BIG.png">
+                                    <h1><ul>Nikon D4</ul></h1>
+                            		<p>The next-generation flagship digital SLR camera is equipped with a new Nikon FX-format CMOS image sensor (36.0 × 23.9 mm) and EXPEED 3, the latest image-processing engine specifically optimized for digital SLR camera.</p>
+ 
+									<p>Designed with the ultimate in versatility and functionality that offers superior image quality rich in detail along with excellent high-speed performance. The Nikon D4 has an effective pixel count of 16.2-million pixels, and offers superior image quality under a broad range of lighting conditions with its image sensor supporting an incredible range of sensitivities from ISO 50 to ISO 204800.</p>
+
+
+									<p id="pricing">$5,999.95 Body only</p>
+                                    
+                                    <div class="section_first-section">
+                                        <ul class="list-A01 pseudo-first-child">
+                                        <li>Further improved high-speed, multifunctional, high-performance image-processing engine EXPEED 3. [NEW] <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>51-point AF system with enhanced performance in subject acquisition and focusing in low-light situations. <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Superior quick response with approx. 0.12 s* startup time and approx. 0.042 s* shutter-release time lag. <br>
+                                        <ul class="list-note-B01">
+                                        <li>* Based on CIPA Guidelines.</li>
+                                        </ul>
+                                        </li>
+                                        <li>Dual card slots for CF card compatible with UDMA 7 and the next-generation recording media, the XQD memory card. <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>High-speed continuous shooting at approx. 11 fps* in FX format (without AE/AF) and approx. 10 fps* (with AE/AF) [NEW]. <br>
+                                        <ul class="list-note-B01">
+                                        <li>* Based on CIPA Guidelines.</li>
+                                        </ul>
+                                        </li>
+                                        <li>New Wireless Transmitter WT-5A/B/C/D that realizes high-speed workflow. <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>HDR (High Dynamic Range) that combines images to produce a single image with a wider dynamic range.<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>White balance that enables finer setting in 10-kelvin steps.<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>High-performance, glass pentaprism viewfinder with approx. 100% frame coverage (FX format) and approx. 0.7x magnification.<br/><br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Approx. 921k-dot, wide-viewing angle, 8-cm (3.2-in.) LCD monitor with reinforced glass.<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>"Sub-selector" for horizontal shooting and "Multi selector for vertical shooting" are newly employed for efficient operation. <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Button illumination that ensures better visibility of the operational system in dark situations. [NEW] <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Virtual horizon that detects both "pitching" and "rolling" directions.<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Newly developed shutter unit tested for approx. 400,000 cycles; shutter speed up to 1/8,000 s and flash synchronization up to 1/250 s.<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Highly efficient energy-saving design that achieves approx. 2,600 shots (with EN-EL18, based on CIPA Standard*1) and approx. 5,500 shots (based on Nikon standard*2).
+                                        
+                                        *1 Measured at 23°C/73.4°F (±2°C/3.6°F) with an AF-S NIKKOR 24-70mm f/2.8G ED lens under the following test conditions: lens cycled from infinity to minimum range and one photograph taken at default settings once every 30 s. Live view not used.
+                                        *2 Measured at 20°C/68°F with an AF-S VR 70-200mm f/2.8G ED lens under the following test conditions: vibration reduction off, image quality set to JPEG normal, image size set to L (large), shutter speed 1/250 s, shutter-release button pressed halfway for three seconds and focus cycled from infinity to minimum range three times; six shots are then taken in succession and monitor turned on for five seconds and then turned off; cycle repeated once standby timer has expired.<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                        <br>
+                            	</div>
+							</div> 
+                            
+                            <div id='canon_5dmark3'>
+                                    <h1><ul>Canon EOS 5D Mark III</ul></h1>
+                                    <img id="rightfloat" src="pic/DSLR/5d_marklll_BIG.jpg" height="240px">
+                                    
+                                    <p>The new semi-professional <b>EOS 5D Mark III</b> Full Frame Digital SLR camera, incorporated with 22.3 megapixel Full Frame CMOS and a new DIGIC 5+ ultra fast digital image processor, providing standard ISO setting as high as ISO 25600. Equipped with a high precision 61-point High Density Reticular AF System for quick and precise auto-focusing performance, in addition to fast 6FPS continuous shooting, the camera can capture every photo opportunity with ease. </p>
+
+									<p id="pricing">$3,499.00 Body only</p>
+                                    
+                                    <div class="section_first-section">
+                                        <ul class="list-A01 pseudo-first-child">
+                                        <li class="list-note-B01">Features Highlight </li>
+                                        <li>22.3 Megapixel, full-frame CMOS sensor <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>DIGIC 5+ processor  <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>ISO 100 to 25,600 as standard, ISO 50 to 102,400 with expansion  <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Up to 6fps shooting speed , 59ms shutter lag <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>High Precision 61-point High Density Reticular AF System <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>New Multiple Exposures and HDR(High Dynamic Range) Mode <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Full HD Movie shooting with ALL-I or IPB compression <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Built-in headphone jack for real-time monitoring of sound recording<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Supports industrial standard Time Code<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Large and bright 100% coverage viewfinder with 0. 71x magnification <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>3.2-inch (3:2) 1.04M dots Clear View II LCD with anti-reflective structure and coating<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Dual-axis electronic level<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Dual Card Slots supporting UDMA7 CF Card and SDXC Card<br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        <li>Rigid Magnesium Alloy Body with enhanced dust and water resistance performance <br>
+                                        <ul class="list-note-B01">
+                                        <li></li>
+                                        </ul>
+                                        </li>
+                                        
+                                        </ul>
+                                        <br>
+                            	</div>
+                                    
+							</div> 
+                            
+                            <div id='sony_xperia_z'>
+                                    <h1><ul>Sony Xperia Z</ul></h1>
+                                    
+                                    <img src="pic/phone/xperia_z_600px.gif" width="400px">
+                                    
+                                    <table width='100%' class='specTable' id='prodSpecTableBasic'><tr class='specTableCaption'><td>Specification</td><td>&nbsp;</td></tr><tr class=><td class='specTable specTableField'>Monitor</td><td class='specTable specTableHighlight'>16,777,216 colour TFT <br>Sony Mobile BRAVIA Engine 2</td></tr><tr class=><td class='specTable specTableField'>Resolution (Pixels)</td><td class='specTable specTableHighlight'>1920 x 1080</td></tr><tr class=><td class='specTable specTableField'>Screen Size (inches)</td><td class='specTable specTableHighlight'>5</td></tr><tr class=><td class='specTable specTableField'>Touch Screen</td><td class='specTable specTableHighlight'>Capacitive touchscreen with on-screen QWERTY keyboard</td></tr><tr class=><td class='specTable specTableField'>Processor</td><td class='specTable specTableHighlight'>1.5 GHz Qualcomm APQ8064+MDM9215M Quad Core</td></tr><tr class=><td class='specTable specTableField'>Memory</td><td class='specTable specTableHighlight'>RAM: 2 GB<br>Flash memory: Up to 16GB eMMC<br>Expansion slot: microSD™ card, up to 32 GB</td></tr><tr class=><td class='specTable specTableField'>Operation System</td><td class='specTable specTableHighlight'>Google Android 4.1 (Jelly Bean)</td></tr><tr class=><td class='specTable specTableField'>Talk Time (up to)</td><td class='specTable specTableHighlight'>11hrs <sup>*1</sup></td></tr><tr class=><td class='specTable specTableField'>Standby Time (up to)</td><td class='specTable specTableHighlight'>550hrs<sup>*1</sup></td></tr><tr class=><td class='specTable specTableField'>Waterproof</td><td class='specTable specTableHighlight'>Water-resistant and Dust-proof (IPX55/57)<sup>*2</sup></td></tr><tr class=><td class='specTable specTableField'>Network</td><td class='specTable specTableHighlight'>UMTS HSPA+ 850 (Band V)、900 (Band VIII)、2100 (Band I) MHz * <br>GSM GPRS/EDGE 850、900、1800、1900 MHz <br>LTE (Bands 1, 3, 5, 7, 8, 20)*</td></tr><tr class=><td class='specTable specTableField'>Size (mm)</td><td class='specTable specTableHighlight'>139 x 71 x 7.9</td></tr><tr class=><td class='specTable specTableField'>Weight (g)</td><td class='specTable specTableHighlight'>146</td></tr><tr class='specTableCaption'><td>Camera</td><td>&nbsp;</td></tr><tr class=><td class='specTable specTableField'>Pixel (Mega)</td><td class='specTable specTableHighlight'>13</td></tr><tr class=><td class='specTable specTableField'>Focus/Zoom</td><td class='specTable specTableHighlight'>Auto Focus / Digital Zoom  up to 16x</td></tr><tr class=><td class='specTable specTableField'>Features</td><td class='specTable specTableHighlight'>HDR for both picture/film / Face detection / Front-facing camera (2 MP 1080p) / Geotagging / HD video recording (1080p) / Image stabiliser / Picture Effect / Quick Launch / Red-eye reduction / Scene recognition / Self-timer / Send to web / Smile detection / Sony Exmor RS for mobile image sensor / Superior Auto / Sweep Panorama / Touch focus</td></tr><tr class=><td class='specTable specTableField'>Flash</td><td class='specTable specTableHighlight'>Flash/Pulsed LED and Photo light</td></tr><tr class='specTableCaption'><td>Connectivity</td><td>&nbsp;</td></tr><tr class=><td class='specTable specTableField'>Connectivity</td><td class='specTable specTableHighlight'>3.5 mm audio jack (CTIA) / aGPS / Bluetooth 4.0 wireless technology / DLNA Certified / GLONASS* / HDMI via MHL support / Media Go / Media Transfer Protocol support / Micro USB support / Native USB tethering / NFC / PC Companion / Screen mirroring / Synchronisation via Exchange ActiveSync, Facebook, Google and SyncML / USB charging / USB High speed 2.0 support / Xperia Link / Wi-Fi and WiFi Hotspot functionality / Wi-Fi Miracast</td></tr><tr class='specTableCaption'><td>Entertainment</td><td>&nbsp;</td></tr><tr class=><td class='specTable specTableField'>Entertainment</td><td class='specTable specTableHighlight'>3D Surround Sound (VPT) / Album art / Bluetooth stereo (A2DP) / Clear Audio+ / Dynamic normaliser / Music tones (MP3/AAC) / PlayNow service* / TrackID music recognition* / "WALKMAN" application / xLoud™ Experience / 3D games / Motions gaming / Video streaming / Facebook application* / Twitter* / YouTube*</td></tr><tr class='specTableCaption'><td>Organizer</td><td>&nbsp;</td></tr><tr class=><td class='specTable specTableField'>Pre-loaded applications</td><td class='specTable specTableHighlight'>Google Chrome* / Google Play* / Google search* / Google Voice Search* / Google Maps for Mobile with Street view and Latitude* / Web browser (WebKit) / Google Talk application*</td></tr><tr class='specTableCaption'><td>Remarks</td><td>&nbsp;</td></tr><tr class=><td class='specTable specTableField'>Remark</td><td class='specTable specTableHighlight'><p>* This feature is not available in all markets<br />
+*1 Values are according to GSM Association Battery Life Measurement Technique. Battery performance may vary depending on network conditions and configurations, and phone usage.<br />
+*2 In compliance with IP5/7 and IP5X, Xperia Z is protected against the ingress of dust and is water resistant. Provided that all ports and covers are firmly closed, the phone is (i) protected against low pressure jets of water from all practicable directions in compliance with IP 55; and/or (ii) can be kept under 1 metre of freshwater for up to 30 minutes in compliance with IP 57. The phone is not designed to float or work submerged underwater outside the IP55 or IP57 classification range and should not be exposed to any liquid chemicals. If liquid detection is triggered on the handset or battery, your warranty will be void. <br />
+<br />
+Product details can refer to <a href="http://www.sonymobile.com.hk/">www.sonymobile.com.hk</a>, subject to any final version to be announced by Sony Mobile</p></td></tr></table>
+                                    
+							</div>   
+						</div>              
+                                                              
+                                       
+                </div>
+                
+                <br><br><br>
+				<footer>&copy; 2013 Some copyright message &nbsp<a href="privacy.html">Privacy</a>&nbsp&nbsp<a href="sitemap.html">Site Map</a></footer>
+            </div>
+        </div>  
+	</body>
+</html>
+
